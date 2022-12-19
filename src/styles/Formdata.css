@@ -1,0 +1,42 @@
+.input {
+    border: 1px solid #1E293B;
+    margin: 5% 8%;
+
+}
+
+.input:hover {
+    border: 1px solid #16B8EB !important;
+}
+
+.input label, #demo-simple-select{
+    color: #16B8EB !important;
+}
+
+.input svg {
+    color: #16B8EB;
+}
+
+.submit-btn {
+    margin: 5% 8% !important;
+    color: #16B8EB !important;
+    background-color: #1E293B !important;
+    border: 1px solid #16B8EB;
+}
+
+
+.filter-p {
+    color: white;
+    opacity: 70%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+ul {
+    background-color: #1E293B;
+    border: 1px solid #16B8EB;
+    color: white !important;
+}
+
+li {
+    color: white !important;
+}

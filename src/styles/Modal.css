@@ -1,0 +1,32 @@
+body.modal-open .background-container{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    backdrop-filter: blur(20px) !important;
+    filter: blur(var(--value, 1rem)); --value:12px;
+}
+
+.md-cnt {
+    background-color: #1E293B;
+    border: 1px solid #16B8EB;
+    color: white !important;
+
+}
+
+.md-cnt .modal-header {
+    border-bottom: none !important;
+}
+
+.span0 {
+    font-weight: bold;
+    color: rgb(226, 224, 224) !important;
+}
+
+.span1 {
+    margin-left: 20px !important;
+    color: rgb(226, 224, 224) !important;
+}
+
+

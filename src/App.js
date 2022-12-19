@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Datasection from "./components/Datasection";
+import Header from "./components/Header";
+import Banner from "./components/Banner";
+import Formdata from "./components/Formdata";
+import { DataContext } from "./components/Datacontext";
+import { useEffect, useState } from "react";
+import { ClassNames } from "@emotion/react";
 function App() {
+
+  const [fetchedData, setData] = useState([]);
+  
+
+  const getData = () => {
+    fetch("http://localhost:8000/api/index.php")
+    .then(res => res.json())
+    .then(data => {
+      setTimeout(() =>{
+       setData(data)
+      }, 300);
+    })
+  }
+
+  useEffect( () => {
+    getData();
+  }, []);
+
+  let getFilteredData = (data) => {
+    setData(data);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <Banner></Banner>
+      <DataContext.Provider value={fetchedData}>
+        <Formdata filter={getFilteredData}></Formdata>
+        <Datasection></Datasection>
+      </DataContext.Provider>
+    </>
   );
 }
 
