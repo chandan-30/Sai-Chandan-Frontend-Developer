@@ -6,6 +6,9 @@
 
     A React App and PHP API to fetch and send data to SpaceX public API
 
+### WORKING OF APP [VIDEO]
+    https://drive.google.com/file/d/1MdF-65aosstWzGV-MqDsDQsPvP9M3LD8/view?usp=share_link
+
 ### TECH STACK USED
 
     REACT
